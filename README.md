@@ -23,7 +23,7 @@ Scripts to help you annotate MozTrap test cases.
 * Open the saved page in the browser, add annotation to the text boxes below each test case.
 * Remeber to save the page often.
 
-#Summarize the Results
+###Summarize the Results
 * Edit ``printCommentSummary.sh`` for the tags and file you want to filter.
 * Run ``printCommentSummary.sh`` to see the counts for your tags.
 
