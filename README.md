@@ -1,9 +1,12 @@
-MozTrapAnnotator
+MozTrapHelpers
 ================
 
+Scripts to help you work with MozTrap test cases.
+
+#MozTrapAnnotator
 Scripts to help you annotate MozTrap test cases.
 
-#Usage
+##Usage
 
 * Open the MozTrap page you want to annotate.
 * If you want to see all test cases steps:
@@ -21,3 +24,31 @@ Scripts to help you annotate MozTrap test cases.
 #Summarize the Results
 * Edit ``printCommentSummary.sh`` for the tags and file you want to filter.
 * Run ``printCommentSummary.sh`` to see the counts for your tags.
+
+#MozTrap to csv exporter
+Export MozTrap test cases to csv.
+
+##Dependencies
+You will need:
+* Node.js 
+* cheerio 
+
+<<<
+For Ubuntu:
+```
+$ sudo apt-get install nodejs npm
+$ sudo update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10``
+$ npm install cheerio
+<<<
+
+##Usage
+
+* Run
+```
+./moztrap2csv.sh "<moztrap url>" 
+```
+> Remember to use the "get a share-able link to this list" icon on the top-left corner of MozTrap.
+> Remeber to add quotes around the url.
+
+
+
