@@ -3,10 +3,10 @@ MozTrapHelpers
 
 Scripts to help you work with MozTrap test cases.
 
-#MozTrapAnnotator
+##MozTrapAnnotator
 Scripts to help you annotate MozTrap test cases.
 
-##Usage
+###Usage
 
 * Open the MozTrap page you want to annotate.
 * If you want to see all test cases steps:
@@ -33,20 +33,20 @@ You will need:
 * Node.js 
 * cheerio 
 
-<<<
-For Ubuntu:
-```
-$ sudo apt-get install nodejs npm
-$ sudo update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10``
-$ npm install cheerio
-<<<
-
-##Usage
+>For Ubuntu:
+>```
+>$ sudo apt-get install nodejs npm
+>$ sudo update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10``
+>$ npm install cheerio
+>```
+###Usage
 
 * Run
+
 ```
-./moztrap2csv.sh "<moztrap url>" 
+./moztrap2csv.sh "[moztrap url]" 
 ```
+
 > Remember to use the "get a share-able link to this list" icon on the top-left corner of MozTrap.
 > Remeber to add quotes around the url.
 
