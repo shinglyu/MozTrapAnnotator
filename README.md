@@ -3,6 +3,8 @@ MozTrapHelpers
 
 Scripts to help you work with MozTrap test cases.
 
+----
+
 ##MozTrapAnnotator
 Scripts to help you annotate MozTrap test cases.
 
@@ -25,10 +27,12 @@ Scripts to help you annotate MozTrap test cases.
 * Edit ``printCommentSummary.sh`` for the tags and file you want to filter.
 * Run ``printCommentSummary.sh`` to see the counts for your tags.
 
-#MozTrap to csv exporter
+----
+
+##MozTrap to csv exporter
 Export MozTrap test cases to csv.
 
-##Dependencies
+###Dependencies
 You will need:
 * Node.js 
 * cheerio 
@@ -39,6 +43,7 @@ You will need:
 >$ sudo update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10``
 >$ npm install cheerio
 >```
+
 ###Usage
 
 * Run
