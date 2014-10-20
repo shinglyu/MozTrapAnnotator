@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8" />
+</head>
+<body>
+  <iframe src="https://moztrap.mozilla.org/manage/cases/?filter-suite=775" frameborder="0"></iframe>
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" charset="utf-8">
+    var mozTrapBaseUrl = 'https://moztrap.mozilla.org'
+    var mozTrapUrl = 'https://moztrap.mozilla.org/manage/cases/?filter-suite=775'
+    $.ajax(
+      { url: mozTrapUrl,
+        //data: $data, 
+        dataType: 'xml',
+        callback: function(returnData) { 
+          $(returnData).find('article.listitem').each(function() {
+            var title = $(this).find('h3.title').text()
+            //console.log(title);
+
+            var priority = $(this).find('div.priority').text()
+            //console.log(priority);
+
+            var product = $(this).find('div.product').text()
+            //console.log(product);
+
+            var modified = $(this).find('div.modified').text()
+            //console.log(modified); 
+            var detailUrl = $(this).find('a.summary.item-summary').attr('href')
+            detailUrl = mozTrapBaseUrl + detailUrl;
+            detailUrl = '=HYPERLINK(\"'+ detailUrl + '\")'
+            //console.log(modified);
+
+            list = [title, priority, product, modified, detailUrl];
+            listWQuotes = [];
+            list.forEach(function(item){
+              listWQuotes.push('"' + item + '"');
+            })
+            console.log(listWQuotes.join(','))
+          });
+          // Jquery find <mytag attribute="foo">...</mytag> and store it in mydata
+          //var mydata = $(returnData).find('mytag[attribute=foo]');
+          // Insert into current page to somewhere with class="after-me"
+          //$('.after-me').html(mydata);
+        }
+    });
+  </script>
+</body>
+</html>
