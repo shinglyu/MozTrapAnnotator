@@ -14,7 +14,8 @@ https://addons.mozilla.org/zh-tw/firefox/addon/moztraphelper/
 https://cdn.rawgit.com/shinglyu/MozTrapAnnotator/master/doc/moztraphelper_doc.html
 
 -----
-**The following scripts are no longer maintained, please consider using the addon above**
+(**The scripts below are no longer maintained, please consider using the addon above**.)
+-----
 
 ##MozTrapAnnotator
 Scripts to help you annotate MozTrap test cases.
