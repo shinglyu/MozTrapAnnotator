@@ -4,6 +4,17 @@ MozTrapHelpers
 Scripts to help you work with MozTrap test cases.
 
 ----
+##MozTrapHelper
+The MozTrapHelper is now separated out as a Firefox Addon. The other scripts are still valid, but please consider using the new addon.
+
+###Installation
+https://addons.mozilla.org/zh-tw/firefox/addon/moztraphelper/
+
+###Documentation
+https://cdn.rawgit.com/shinglyu/MozTrapAnnotator/master/doc/moztraphelper_doc.html
+
+-----
+**The following scripts are no longer maintained, please consider using the addon above**
 
 ##MozTrapAnnotator
 Scripts to help you annotate MozTrap test cases.
