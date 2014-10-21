@@ -15,7 +15,6 @@ https://cdn.rawgit.com/shinglyu/MozTrapAnnotator/master/doc/moztraphelper_doc.ht
 
 -----
 (**The scripts below are no longer maintained, please consider using the addon above**.)
------
 
 ##MozTrapAnnotator
 Scripts to help you annotate MozTrap test cases.
