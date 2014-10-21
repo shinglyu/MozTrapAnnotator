@@ -1,0 +1,77 @@
+Test cases for moztrap helper
+=================================
+
+#Export to csv
+---
+AS A user 
+I WANT to export cases to csv 
+SO THAT I can easily manipulation the cases
+
+SCENARIO: Test that the export to csv works
+GIVEN I am in a cases or suites list
+WHEN Open create a test case window
+WHEN Right-click > Export to CSV
+THEN a csv file is prompted to be downloaded
+WHEN Open it in libreoffice >>> Format should be correct
+
+SCENARIO: No export to csv in other views
+GIVEN I am NOT in a cases or suites list
+WHEN Right-click 
+THEN There is no Export to CSV item
+
+#Import a text file as case
+---
+AS A user 
+I WANT to import cases from text files
+SO THAT I can easily compose cases in any editor I want
+
+SCENARIO: Test that the import from file works
+GIVEN I am in a cases creation page 
+WHEN Right-click > Import from file 
+THEN A prompt opens
+WHEN Select a valid file
+THEN All the fields are inserted to the fields
+
+SCENARIO: No import from file in other views
+GIVEN I am NOT in a cases creation view
+WHEN Right-click 
+THEN There is no import from file views
+
+SCENARIO: Error handeling
+GIVEN The file to be imported is corrputed (can't read)
+WHEN Right-click > Import from file 
+THEN A message says the file is bad
+WHEN Select again using a valid file
+THEN All the fields are inserted to the fields
+
+SCENARIO: Error handeling
+GIVEN The file to be imported is in bad format
+WHEN Right-click > Import from file 
+THEN A message says the which part of the format is bad
+WHEN Select again using a valid file
+THEN All the fields are inserted to the fields
+
+#Expand All
+---
+AS A user 
+I WANT to expand/hide all cases/suites all at once
+SO THAT I can easily compose cases in any editor I want
+
+SCENARIO: Test that the exapnd/hide all works in cases
+GIVEN I am in a cases view
+WHEN Right-click > Expand/hide all
+THEN All cases are expended
+WHEN Right-click > Expand/hide all
+THEN All cases are hided
+
+SCENARIO: Test that the exapnd/hide all works in suites
+GIVEN I am in a suites view
+WHEN Right-click > Expand/hide all
+THEN All cases are expended
+WHEN Right-click > Expand/hide all
+THEN All cases are hided
+
+SCENARIO: No expand/hide all in other views
+GIVEN I am NOT in a cases/suites view
+WHEN Right-click 
+THEN There is no expand/hide all views
