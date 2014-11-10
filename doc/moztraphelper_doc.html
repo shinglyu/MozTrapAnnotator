@@ -141,6 +141,10 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>Draft of 'Welcome'</li>
+
+<li>Suite File Syntax</li>
+
 <li>Testcase Syntax</li>
 
 <li>Welcome</li>
@@ -5124,7 +5128,7 @@ Error message and password prompt
 <div created="20141021055154883" creator="s" modified="20141021055155948" modifier="shingly" title="$:/status/UserName">
 <pre>shinglyu</pre>
 </div>
-<div list="Welcome [[ Testcase Syntax]] [[Testcase Syntax]] $:/ControlPanel GettingStarted" title="$:/StoryList">
+<div list="[[Suite File Syntax]] [[Draft of 'Welcome']] [[Testcase Syntax]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -5212,6 +5216,59 @@ Error message and password prompt
         }
     }
 }</pre>
+</div>
+<div created="20141021055238416" creator="shinglyu" draft.of="Welcome" draft.title="Welcome" modified="20141022071111596" modifier="shinglyu" tags="toc" title="Draft of 'Welcome'">
+<pre>! Installation
+Install it here:
+https://addons.mozilla.org/zh-tw/firefox/
+
+!How to use
+Various features will be added to the context menu, ''right-click'' on a MozTrap page to use features relevant to the current page.
+
+!Features:
+* Export to CSV
+* Import a test case from file ([[file syntax|Testcase Syntax]])
+* Expand/hide all items (works for cases, suites and runs) 
+
+!Submit a bug/pull request
+https://github.com/shinglyu/MozTrapAnnotator
+</pre>
+</div>
+<div created="20141022071057875" creator="shinglyu" modified="20141022071940580" modifier="shinglyu" title="Suite File Syntax">
+<pre>The suite file has the following syntax:
+
+Each line is a case you want to add or remove from the suite, for the case you want to add:
+
+```
++, [case title], [comments]
+```
+
+And for the case you want to exclude:
+
+```
+-, [case title], [comments]
+```
+``[comments]`` are ignored, you can type anything there to help you organize the list.
+
+
+!Example:
+Suppose you want to add cases named &quot;Case title 005&quot; and &quot;Case title 006&quot; to the suite, and remove &quot;Case title 001&quot; from the suite, the file should be like:
+
+```
++, Case title 005, comments for 005
++, Case title 006, comments for 006
+-, Case title 001, comments for 001
+```
+
+!Prepare it using LibreOffice or Excel
+The easiest way to create such file is to use the &quot;Export to CSV&quot; feature.
+
+#Export a case list to CSV
+# Open the CSV file in LibreOffice or Excel
+# Insert a column to the left of the case title field
+# Add `+` or `-` flags to that column.
+# Save the file as CSV
+</pre>
 </div>
 <div created="20141021055840280" creator="shinglyu" modified="20141021060831010" modifier="shinglyu" tags="toc" title="Testcase Syntax">
 <pre>The test case file has the following syntax:
