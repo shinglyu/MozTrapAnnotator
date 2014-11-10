@@ -5220,7 +5220,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20141022071057875" creator="shinglyu" modified="20141022071940580" modifier="shinglyu" title="Suite File Syntax">
+<div created="20141022071057875" creator="shinglyu" modified="20141110083833144" modifier="shinglyu" title="Suite File Syntax">
 <pre>The suite file has the following syntax:
 
 Each line is a case you want to add or remove from the suite, for the case you want to add:
@@ -5238,23 +5238,25 @@ And for the case you want to exclude:
 
 
 !Example:
-Suppose you want to add cases named &quot;Case title 005&quot; and &quot;Case title 006&quot; to the suite, and remove &quot;Case title 001&quot; from the suite, the file should be like:
+Suppose you want to add the first two cases to the suite, and remove the last one from the suite, the file should be like:
 
 ```
-+, Case title 005, comments for 005
-+, Case title 006, comments for 006
--, Case title 001, comments for 001
++, Test that the camera works, (comments goes here)
++, Test that the video recording works, 
+-, Test that we do have a camera, This case is no longer valid 
 ```
 
-!Prepare it using LibreOffice or Excel
+!Prepare it using ~LibreOffice or Excel
 The easiest way to create such file is to use the &quot;Export to CSV&quot; feature.
 
-#Export a case list to CSV
-# Open the CSV file in LibreOffice or Excel
-# Insert a column to the left of the case title field
+#Filter the cases you are interested in using the standard search function in ~MozTrap.
+#Export a case list to CSV.
+# Open the CSV file in ~LibreOffice or Excel
+# Insert a column to the left of the case title field.
 # Add `+` or `-` flags to that column.
-# Save the file as CSV
-</pre>
+# Save the file as CSV.
+# Edit the suite you are interested in.
+# Import the CSV.</pre>
 </div>
 <div created="20141021055840280" creator="shinglyu" modified="20141021060831010" modifier="shinglyu" tags="toc" title="Testcase Syntax">
 <pre>The test case file has the following syntax:
