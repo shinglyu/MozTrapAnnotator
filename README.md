@@ -1,5 +1,6 @@
 MozTrapHelpers
 ================
+#This repo is deprecated, please use [MozTrapHelper](https://github.com/shinglyu/MozTrapHelper).
 
 Scripts to help you work with MozTrap test cases.
 
